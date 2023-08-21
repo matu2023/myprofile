@@ -1,6 +1,8 @@
 /* PCスマホ共通スタイル */
 
 body{
+    padding: 0px;
+    margin: 0px;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
 
@@ -8,13 +10,27 @@ body{
     background-color: #ffffff;
 }
 
+img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
 /* PC用 */
 @media screen and (min-width: 768px) {
-     /* 横幅設定 */
+    
+    /* 横幅設定 */
     body {
-        max-width: 1080px;
+        /* max-width: 1080px;
         min-width: 960px;
-        margin: 0 auto 0 auto;
+        margin: 0 auto 0 auto; */
+    }
+
+    h1 {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        text-align: center;
+        font-size: 34px;
+        font-family: "Noto Sans JP", sans-serif;
     }
    
     /* ヘッダー */
@@ -77,45 +93,50 @@ body{
 
 
     /* メインビジュアル */
+    
     #main-visual >img {
-        width: 100%;
-        max-width: 960px;
         margin: auto;
         display: block;
     }
 
     /* About */
-    #about {
+    .about {
         margin: 80px auto;
     }
 
-    #about > h1 {
-        font-size: 34px;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    #about2 > h2 {
+    .content  h2 {
         font-size: 24px;
         font-weight: bold;
+    }
 
+    .content {
+        margin: 0 auto;
+        padding-left: 40px;
     }
 
     li {
         font-size: 18px;
     }
 
-    #about2 {
+    #about {
+        padding: 10px;
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 20px auto 20px auto;
+        max-width: 960px;
     }
 
-    #about2 > img {
+    .circle {
         margin: auto 20px;
         border-radius: 50%;
-        max-width: 141px;
-        max-height: 142px;
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        /* border: 3px solid #999; */
+        padding: 3px;
     }
+    
 
     /* works */
 
@@ -123,23 +144,24 @@ body{
         margin: 80px auto;
     }
 
-    #works > h1 {
-        font-size: 34px;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    #works > div {
+    .works {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        margin: 20px auto 20px auto;
+        max-width: 960px;
     }
-
-    #works > figcaption {
-        font-size: 18px;
+    
+    /* Worksの画像と説明部分 */
+    .item {
+        padding-bottom: 60px;
+        width: 25%;
     }
-
-    #works > figure {
-        width: 179px;
+    
+    /* Worksの画像と説明部分（2個目） */
+    .item_center {
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     /* フッター */
@@ -156,6 +178,14 @@ body{
     body {
         min-width: 375px;
         margin: 0;
+    }
+
+    h1 {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        text-align: center;
+        font-size: 34px;
+        font-family: "Noto Sans JP", sans-serif;
     }
 
     /* ヘッダー */
@@ -226,52 +256,56 @@ body{
     }
 
     /* About */
-    #about {
+    .about {
         margin: 80px auto;
     }
 
-    #about > h1 {
+    .content  h2 {
         font-size: 24px;
         font-weight: bold;
-        text-align: center;
     }
 
-    #about2 > h2 {
-        font-size: 20px;
-        font-weight: bold;
-
+    .content {
+        margin: 0 auto;
+        padding-left: 40px;
     }
 
     li {
-        font-size: 12px;
+        font-size: 18px;
     }
 
-    #about2 {
+    #about {
+        padding: 10px;
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 20px auto 20px auto;
+        max-width: 960px;
     }
 
-    #about2 > img {
-        margin: auto 10px;
+    .circle {
         border-radius: 50%;
-        max-width: 141px;
-        max-height: 142px;
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        /* border: 3px solid #999; */
+        padding: 3px;
     }
+    
 
     /* works */
 
-    #works {
-        margin: 40px auto;
+    .item {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 40px;
     }
+    
 
     #works > h1 {
         font-size: 24px;
         font-weight: bold;
         text-align: center;
-    }
-
-    #works > figcaption {
-        font-size: 10px;
     }
 
     #works > img {
